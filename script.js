@@ -3,8 +3,8 @@ const convoy = document.getElementById("convoy");
 
 // Starting position
 let pos = -500;
-const stopAt = 300; // where it stops
 const speed = 4;    // pixels per frame
+const stopAt = window.innerWidth * 0.75; // stop at 75% of screen width
 
 // Animation loop
 function drive() {

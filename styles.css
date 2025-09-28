@@ -11,7 +11,7 @@ body {
   top: 200px;
   left: -500px; /* start offscreen */
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* align bottom edges */
   gap: 20px; /* space between car and trailer */
 }
 
@@ -27,6 +27,8 @@ body {
   align-items: center;
   color: white;
   font-weight: bold;
+  position: relative; /* needed for attaching wheels */
+  box-shadow: 4px 4px 0px #999;
 }
 
 /* Trailer box */
@@ -56,6 +58,22 @@ body {
 
 .trailer-wheel.right {
   right: 2rem;
+}
+
+.car-wheel {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: black;
+  border-radius: 50%;         /* makes it a circle */
+  position: absolute;
+  bottom: -1.25rem;           /* half below trailer */
+  border: 4px solid gray;     /* gives a rim look */
+}
+.car-wheel.left {
+  left: 1.5rem;
+}
+.car-wheel.right {
+  right: 1.5rem;
 }
 .hitch {
   width: 1.5rem;
